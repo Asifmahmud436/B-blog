@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Blog</title>
 </head>
 <body>
     <header>
-        <h1><a href="{% url 'home' %}">My Blog</a></h1>
+        <div class="nav-left">
+            <h1><a href="{% url 'home' %}">My Blog</a></h1>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'post_new' %}">+New Blog</a>
+        </div>
     </header>
     <div>
-        {% block content %}{% endblock  %}
+        {% block content %}
+        {% endblock  %}
     </div>
 </body>
 </html>
